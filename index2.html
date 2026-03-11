@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar" >
+
+        <div class="logo">MyPortfolio</div>
+
+        <ul class="nav-menu" id="nav-menu">
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </nav>
+
+    <!-- herosection -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h1>Hello, I'm <span>Eman</span></h1>
+
+            <h2 class="typing"></h2>
+
+            <p>
+                I create modern and responsive websites using HTML, CSS and JavaScript.
+            </p>
+
+            <a href="#projects" class="hero-btn">View My Work</a>
+
+        </div>
+
+        <div class="hero-img">
+
+            <img src="images/about-perfil.png" alt="profile">
+
+        </div>
+
+    </section>
+
+    <!-- about us -->
+    <section class="about" id="about">
+        <div class="about-container">
+
+            <h2 class="section-title">ABOUT ME</h2>
+
+            <div class="about-content">
+
+                <div class="about-img">
+                    <img src="images/home-perfil.png" alt="profile">
+                </div>
+
+                <div class="about-text">
+                    <h3>Hello, I'm a Web Developer</h3>
+                    <p>
+                        I love creating modern and responsive websites.
+                        I enjoy working with HTML, CSS, JavaScript and React
+                        to build clean and user-friendly interfaces.
+                        My goal is to create beautiful digital experiences
+                        that make the web more interactive and engaging.
+                    </p>
+
+                    <!-- About Section Button -->
+                    <a href="resume.pdf" class="about-btn" target="_blank" download>Download Resume</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- skills section -->
+    <section class="skills" id="skills">
+        <h2 class="skills-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript (Basic)</div>
+            <div class="skill-card">PHP (Basic)</div>
+            <div class="skill-card">Graphics Designing</div>
+            <div class="skill-card">Affiliate Marketing</div>
+
+        </div>
+    </section>
+    <!-- project section -->
+    <section class="projects" id="projects">
+        <h2 class="projects-title">My Projects</h2>
+        <div class="projects-container">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Calculator</h3>
+                    <p>Simple and functional web calculator built with HTML, CSS, and JS.</p>
+                    <a href="https://github.com/emanbuttt1151/CodeAlpha_Calculator.git" target="_blank" class="project-btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Personal Portfolio</h3>
+                    <p>My own responsive portfolio website showcasing skills and projects.</p>
+                    <a href="https://your-live-link.com/portfolio" target="_blank" class="project-btn">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Image Gallery</h3>
+                    <p>Interactive image gallery with filters and modern hover effects.</p>
+                    <a href="https://github.com/emanbuttt1151/CodeAlpha_ImageGallery.git" target="_blank" class="project-btn">View Project</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- contact section -->
+    <section class="contact" id="contact">
+        <h2 class="contact-title">Contact Me</h2>
+
+        <div class="contact-container">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>Email</h3>
+                    <p>emanbuttt1151@gmail.com</p>
+                </div>
+                <div class="info-card">
+                    <h3>Phone</h3>
+                    <p>+92 300 1234567</p>
+                </div>
+                <div class="info-card">
+                    <h3>Location</h3>
+                    <p>Pakistan</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit" class="contact-btn">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+    <link rel="stylesheet" href="script.js">
+
+</html>
