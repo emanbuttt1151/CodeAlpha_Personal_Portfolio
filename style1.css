@@ -10,18 +10,27 @@
     justify-content: space-between;
     align-items: center;
     padding: 18px 8%;
-    background: #111;
     color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: rgb(10, 10, 59);
+    backdrop-filter: blur(8px);
+    /* optional, modern effect */
+
 }
+
+.nav-menu a::after {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
 
 /* Logo */
 .logo {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Menu */
@@ -227,18 +236,32 @@
     font-size: 20px;
     transition: 0.35s;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.08);
 
-    /* normal shadow */
+    /* transparent border */
+    border: 2px solid transparent;
+
+    /* gradient border (2 color shiny) */
+    background-image:
+        linear-gradient(#2a2a60, #2a2a60),
+        linear-gradient(135deg, #667eea, #764ba2);
+
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .skill-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    background: linear-gradient(135deg, #667eea, #764ba2);
 
-    /* strong glow shadow */
-    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.6);
+    transform: translateY(-15px);
+
+    /* stronger shiny colors */
+    background-image:
+        linear-gradient(#2a2a60, #2a2a60),
+        linear-gradient(135deg, #667eea, #764ba2, #00f7ff);
+
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+
 }
 
 .projects {
@@ -266,29 +289,41 @@
     margin: auto;
 }
 
+
+
 .project-card {
     background: #1c1c40;
     border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    transition: 0.4s;
+    padding: 25px;
     cursor: pointer;
+    transition: 0.4s;
+
+    /* transparent border */
+    border: 2px solid transparent;
+
+    /* 2 color gradient border */
+    background-image:
+        linear-gradient(#1c1c40, #1c1c40),
+        linear-gradient(135deg, #667eea, #764ba2);
+
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
+
 
 .project-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
-}
 
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: 0.3s;
-}
+    transform: translateY(-10px);
 
-.project-card:hover img {
-    transform: scale(1.05);
+    /* stronger shiny colors */
+    background-image:
+        linear-gradient(#1c1c40, #1c1c40),
+        linear-gradient(135deg, #667eea, #764ba2, #00f7ff);
+
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.5);
+
 }
 
 .project-info {
@@ -325,9 +360,98 @@
 }
 
 
+
+.Certificates {
+    background: linear-gradient(135deg, #1c1c51, #1f1f4d);
+    padding: 100px 10%;
+    text-align: center;
+    color: white;
+}
+
+.cert-title {
+    font-size: 45px;
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    color: transparent;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+
+/* GRID LAYOUT */
+
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* CERT CARD */
+
+.cert-card {
+    background: #1c1c40;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.4s;
+    text-align: center;
+
+    /* shiny outline */
+    border: 2px solid transparent;
+    background-image:
+        linear-gradient(#1c1c40, #1c1c40),
+        linear-gradient(135deg, #667eea, #764ba2);
+
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.5);
+}
+
+.cert-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cert-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.cert-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.cert-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.6);
+}
+
+.cert-card p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
 .contact {
-    background: linear-gradient(135deg, #f0e6ff, #aa98de);
-    color: #111;
+    background: linear-gradient(135deg, #1a1a3d, #2a2a60);
+    color: white;
     /* light background */
     padding: 100px 10%;
     text-align: center;
@@ -361,23 +485,56 @@
     gap: 25px;
 }
 
-.info-card {
-    background: white;
+/* .info-card {
+    background: #2a2a60;
+    color: white;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
+} */
+
+/* .info-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.25);
+} */
+.info-card {
+    background: #2a2a60;
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.3s;
+
+    /* transparent border */
+    border: 2px solid transparent;
+
+    /* 2 color gradient outline */
+    background-image:
+        linear-gradient(#2a2a60, #2a2a60),
+        linear-gradient(135deg, #667eea, #764ba2);
+
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .info-card:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.25);
+
+    transform: translateY(-6px);
+
+    /* stronger shine */
+    background-image:
+        linear-gradient(#2a2a60, #2a2a60),
+        linear-gradient(135deg, #667eea, #764ba2, #00f7ff);
+
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+
 }
 
 .info-card h3 {
     margin-bottom: 10px;
     font-size: 20px;
-    color: #333;
+    color: white;
 }
 
 /* Contact Form */
@@ -395,8 +552,9 @@
     border-radius: 10px;
     border: 1px solid #ccc;
     outline: none;
-    background: white;
-    color: #111;
+    /* background: white; */
+    background: #2a2a60;
+    color: #f0eeee;
     resize: none;
     font-size: 16px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -449,12 +607,12 @@
 
     .hero-text h2 {
         font-size: 24px;
-       
+
     }
 
     .hero-img img {
         width: 300px;
-       
+
     }
 
     .about-content {
@@ -582,4 +740,4 @@
     .project-info p {
         font-size: 14px;
     }
-} 
+}
